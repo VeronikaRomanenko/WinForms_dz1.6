@@ -19,7 +19,8 @@ namespace WinForms_dz1._6
 
         private void dtpData_ValueChanged(object sender, EventArgs e)
         {
-            txbResult.Text = (DateTime.Parse(dtpData.Text)).ToString("dddd");
+            DateTime tmp = DateTime.Parse(dtpData.Text);
+            txbResult.Text = tmp.DayOfWeek.ToString();
         }
     }
 }
